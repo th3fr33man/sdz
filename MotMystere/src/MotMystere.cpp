@@ -12,7 +12,7 @@
 using namespace std;
 
 
-string melangerMot(string mot, string& motMelange)
+void melangerMot(string mot, string& motMelange)
 {
 	srand(time(0)); // lance la génération de chiffre aléatoire
 	while(mot.size() != 0)
