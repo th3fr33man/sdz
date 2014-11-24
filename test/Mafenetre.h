@@ -7,7 +7,10 @@
 #include <QLCDNumber>
 #include <QSlider>
 #include <QProgressBar>
-
+#include <QMessageBox>
+#include <QInputDialog>
+#include <QLayout> // on inclus ici tous les layouts juste pour pouvoir les tester sans devoir changer l'include à chaque fois
+#include <QFormLayout>
 
 class MaFenetre : public QWidget
 {
@@ -20,14 +23,22 @@ private:
     QLCDNumber *m_lcd;
     QSlider *m_slider;
     QProgressBar *m_bar;
-
+    QPushButton *m_boutonDialogue;
+    QPushButton *m_boutonQuitter;
+    QPushButton *m_boutonPseudo;
+    QString pseudo;
 
 signals:
     void agrandissementMax();
+    void fermeture();
 
 public slots:
     void resetSlider();
     void changerLargeur(int largeur);
+    void ouvrirDialogue();
+    void ouvrirAlerte();
+    void confirmation();
+    void demanderPseudo();
 
 };
 
