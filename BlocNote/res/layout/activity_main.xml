@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.orion.blocnote.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    	<Button
+    	    android:id="@+id/btn_gras"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="Gras"
+    	    android:textSize="10dp"
+    	    android:layout_marginLeft="10dp"
+    	    android:layout_marginBottom="20dp"
+    	    style="@style/btn_option"/>
+    	<Button
+    	    android:id="@+id/btn_italique"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="Italique"
+    	    android:textSize="10dp"
+    	   	android:gravity="center"
+    	    style="@style/btn_option"
+    	    android:layout_centerHorizontal="true"/>
+    	<Button
+    	    android:id="@+id/btn_souligne"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="Souligne"
+    	    android:textSize="10dp"
+    	    style="@style/btn_option"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_marginRight="10dp"/>
+    	<TextView 
+    	    android:id="@+id/txt_smile"
+    	    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@id/btn_gras"
+    	    android:text="Smiley :"
+    	    android:layout_marginBottom="20dp"/>
+    	<Button
+    	    android:id="@+id/smiley_sourire"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_toRightOf="@+id/txt_smile"
+    	    android:layout_below="@id/btn_gras"
+    	    android:layout_marginLeft="10dp"
+    	    style="@style/smiley_sourire"/>
+    	<Button
+    	    android:id="@+id/smiley_gros_sourire"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	   	android:gravity="center"
+    	    style="@style/smiley_gros_sourire"
+    	    android:layout_centerHorizontal="true"
+    	    android:layout_below="@id/btn_gras"/>
+    	<Button
+    	    android:id="@+id/smiley_clin_oeil"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    style="@style/smiley_clin_oeil"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_marginRight="30dp"
+    	    android:layout_below="@id/btn_gras"
+    	    android:layout_alignRight="@id/btn_souligne"/>
+    	
+    	<RadioGroup 
+    	    android:id="@+id/rgrp_color"
+    	    android:layout_below="@+id/txt_smile"
+    	    android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+    	    android:orientation="horizontal">
+    	    <RadioButton 
+    	        android:text="noir"
+    	        android:checked="true" />
+    	    <RadioButton 
+    	        android:text="bleu"/>
+    	    <RadioButton 
+    	        android:text="rouge"/>
+    	</RadioGroup>
+    	
+    	<Button
+    	    android:id="@+id/btn_hide"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="hide"
+    	    android:textSize="10dp"
+    	   	android:gravity="center"
+    	    style="@style/btn_hide"
+    	    android:layout_below="@+id/rgrp_color"
+    	    android:layout_alignRight="@+id/btn_italique"/>
+    	
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu">
+        <TextView
+        android:id="@+id/txt_edition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edition :" />
+        <EditText
+        android:id="@+id/edit_edition"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txt_edition"/>
+        <TextView
+        android:id="@+id/txt_previsualisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_edition"
+        android:text="Prévisialisation :" />
+        <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/txt_previsualisation"/>
+    </RelativeLayout>
+    
+    
+
+</RelativeLayout>
