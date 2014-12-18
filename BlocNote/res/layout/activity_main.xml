@@ -1,5 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.orion.blocnote.Slider xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slider"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -17,7 +18,7 @@
     	    android:id="@+id/btn_gras"
     	    android:layout_width="wrap_content"
     	    android:layout_height="wrap_content"
-    	    android:text="Gras"
+    	    android:text="@string/txt_gras"
     	    android:textSize="10dp"
     	    android:layout_marginLeft="10dp"
     	    android:layout_marginBottom="20dp"
@@ -26,7 +27,7 @@
     	    android:id="@+id/btn_italique"
     	    android:layout_width="wrap_content"
     	    android:layout_height="wrap_content"
-    	    android:text="Italique"
+    	    android:text="@string/txt_italique"
     	    android:textSize="10dp"
     	   	android:gravity="center"
     	    style="@style/btn_option"
@@ -35,17 +36,18 @@
     	    android:id="@+id/btn_souligne"
     	    android:layout_width="wrap_content"
     	    android:layout_height="wrap_content"
-    	    android:text="Souligne"
+    	    android:text="@string/txt_souligne"
     	    android:textSize="10dp"
     	    style="@style/btn_option"
     	    android:layout_alignParentRight="true"
     	    android:layout_marginRight="10dp"/>
     	<TextView 
     	    android:id="@+id/txt_smile"
+    	    style="@style/black_text"
     	    android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:layout_below="@id/btn_gras"
-    	    android:text="Smiley :"
+    	    android:text="@string/txt_smiley"
     	    android:layout_marginBottom="20dp"/>
     	<Button
     	    android:id="@+id/smiley_sourire"
@@ -78,28 +80,21 @@
     	    android:layout_below="@+id/txt_smile"
     	    android:layout_width="match_parent"
         	android:layout_height="wrap_content"
+        	android:checkedButton="@+id/rbtn_noir"
     	    android:orientation="horizontal">
     	    <RadioButton 
+    	        android:id="@+id/rbtn_noir"
     	        android:text="noir"
-    	        android:checked="true" />
+    	        android:checked="false" />
     	    <RadioButton 
-    	        android:text="bleu"/>
+    	        android:id="@+id/rbtn_bleu"
+    	        android:text="bleu"
+    	        android:checked="false"/>
     	    <RadioButton 
-    	        android:text="rouge"/>
+    	        android:id="@+id/rbtn_rouge"
+    	        android:text="rouge"
+    	        android:checked="false"/>
     	</RadioGroup>
-    	
-    	<Button
-    	    android:id="@+id/btn_hide"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="wrap_content"
-    	    android:text="hide"
-    	    android:textSize="10dp"
-    	   	android:gravity="center"
-    	    style="@style/btn_hide"
-    	    android:layout_below="@+id/rgrp_color"
-    	    android:layout_alignRight="@+id/btn_italique"/>
-    	
-
     </RelativeLayout>
     
     <RelativeLayout
@@ -107,29 +102,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/menu">
+    	<Button
+    	android:id="@+id/btn_hide"
+    	style="@style/btn_hide"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center_horizontal"
+    	android:gravity="center"
+    	android:layout_centerHorizontal="true"
+    	android:text="hide"
+    	android:textSize="10dp"/>
         <TextView
         android:id="@+id/txt_edition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edition :" />
+        style="@style/black_text"
+        android:layout_below="@+id/btn_hide"
+        android:text="@string/txt_edition" />
         <EditText
         android:id="@+id/edit_edition"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textAutoCorrect|textImeMultiLine" 
+        style="@style/black_text"
+        android:layout_below="@+id/btn_hide"
         android:layout_toRightOf="@+id/txt_edition"/>
         <TextView
         android:id="@+id/txt_previsualisation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_edition"
-        android:text="Prévisialisation :" />
+        style="@style/black_text"
+        android:text="@string/txt_previsualisation" />
         <TextView
         android:id="@+id/txt_result"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        style="@style/black_text"
         android:layout_below="@+id/txt_previsualisation"/>
     </RelativeLayout>
     
     
 
-</RelativeLayout>
+</com.orion.blocnote.Slider>

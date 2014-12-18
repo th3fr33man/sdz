@@ -4,5 +4,17 @@
     <string name="app_name">Bloc Note</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+	<string name="txt_gras">Gras</string>
+	<string name="txt_italique">Italique</string>
+	<string name="txt_souligne">Souligne</string>
+	<string name="txt_smiley">Smiley :</string>
+	<string name="txt_noir">Noir</string>
+	<string name="txt_bleu">Bleu</string>
+	<string name="txt_rouge">Rouge</string>
+	<string name="txt_edition">Edition :</string>
+	<string name="txt_previsualisation">Previsualisation :</string>
+	<string name="txt_cacher">Cacher :</string>
+	<string name="txt_afficher">Afficher :</string>
+	
+	
 </resources>
