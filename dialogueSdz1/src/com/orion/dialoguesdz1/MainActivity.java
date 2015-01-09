@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 
@@ -29,6 +30,7 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+	private Menu menu = null;
 	private final int COMPTEUR_LIMITE = 5;
 	private int compteur = 0;
 	Button btn_aff_dial = null;
@@ -63,6 +65,7 @@ public class MainActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		this.menu = menu;
 		return true;
 	}
 
@@ -71,9 +74,19 @@ public class MainActivity extends ActionBarActivity {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		switch(item.getItemId())
+		{
+			case R.id.action_settings:
+				Toast.makeText(this, "menu setting selectionné", Toast.LENGTH_SHORT).show();;
+				return true;
+			case R.id.item1:
+				Toast.makeText(this, "menu item 1 selectionné", Toast.LENGTH_SHORT).show();;
+				return true;
+			case R.id.item2:
+				menu.setGroupEnabled(R.id.group2, true);
+				return true;
+				
+			// même principe pour les autres menu et sous-menu
 		}
 		return super.onOptionsItemSelected(item);
 	}
